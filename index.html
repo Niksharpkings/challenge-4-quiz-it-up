@@ -1,0 +1,169 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../../../favicon.ico">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <title>Challenge 4 - UCLAx-U2 Coding Quiz Challenge </title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navWrapper">
+        <a class="navTitle" href="index.html">UCLAx-U2 Coding Quiz</a>
+        <ul class="navLinks" id="navLinksId">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="GitHub.html">GitHub</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="privacy-policy-license.html">Legal Rights </a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <aside>
+    <h2 class="HighScoreBoard">High Score Board</h2>
+    <div class="highScoreBackGround">
+
+      <div class="viewHighScoreRowClass">
+        <details id="highScoreDetailsId">
+          <summary>Top Highest Scores</summary>
+          <div id="viewTotalHighscoresId">
+
+          </div>
+          <table aria-describedby="theScoreBoard">
+            <colgroup id="theTopScoreboardId" span="1" style="background:red">List of names and there time and scores
+            </colgroup>
+            <tr>
+              <th id="tableNameList">Names</th>
+              <th id="tablePointsAndTime"><span>Points and Time</span></th>
+            </tr>
+            <div>
+              <table aria-describedby="theScoreBoardListedId">
+                <colgroup id="theScoreboardUsersId" span="1" style="background:red">List of names and there time and
+                  scores
+                </colgroup>
+                <tr>
+                  <th id="userNameInitialsId">Username Initials</th>
+                  <td id="usersNameInitalsId">Users name here </td>
+                </tr>
+                <tr>
+                  <th id="timeKeeperId">Time:</th>
+                  <td id="savedCountdownId"><span id="quizCountdownId">0</span></td>
+                </tr>
+                <tr>
+                  <th id="savedScoreKeeperId">Total Score:</th>
+                  <td id="savedQuizPointsId"><span id="savedQuizPointsId">0</span></td>
+                </tr>
+              </table>
+            </div>
+          </table>
+        </details>
+        <button onclick="topHighScore()" type="button" class="btn" id="viewTotalHighscoresButtonId">👉View
+          Scores👈</button>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <div id="quizPromptBackGroundId" class="quizPromptBackGround">
+
+      <section id="sectionQuizPromptId" class="sectionQuizPrompt">
+        <div id="quizPromptIntroId" class="quizpromptIntro">
+          <h2 class="quizPromptBackGroundH2">Coding Quiz Challenge</h2>
+          <p class="introDialog">Quiz is on a timer.<br>
+            Incorrect chooses will deduct the time and score. <br>
+            On yah ready, set, ...!
+          </p>
+          <button id="startQuizButtonId" class="startQuizButton">Start Quiz, GO !</button>
+        </div>
+      </section>
+
+      <section id="sectionQuizPromptMainId" class="sectionQuizpromptMainId">
+        <div class="quizQuestions">
+          <div class="quizTimerScoreBox" id="quizTimerScoreBoxId">
+          <div class="quizTimeResults">
+            <p class="quizTimer">Quiz Timer: </p>
+            <span id="quizTimerId">0</span>
+          </div>
+          <div class="quizScoreResults">
+            <p class="quizScoreResultsText">Score: </p>
+            <span id="quizCountResultsScore">0</span>
+        </div>
+        
+        </div>
+          <h2 id="QuestionId" class="Question">Question:</h2>
+          <p id="chosesId" class="choses">
+            <label for="selection">
+              <input type="radio" name="selection" id="selection1Id" value="1">
+              <span id="answer1Id">selection</span>
+            </label>
+            <label for="selection">
+              <input type="radio" name="selection" id="selection2Id" value="2">
+              <span id="answer2Id">selection</span>
+            </label>
+            <label for="selection">
+              <input type="radio" name="selection" id="selection3Id" value="3">
+              <span id="answer3Id">selection</span>
+            </label>
+            <label for="selection">
+              <input type="radio" name="selection" id="selection4Id" value="4">
+              <span id="answer4Id">selection</span>
+            </label>
+          </p>
+          <button type="button" class="btn" id="submitAnswerButtonId">Submit Answer</button>
+        </div>
+      </section>
+
+      <section id="sectionQuizResultsId" class="sectionQuizResults">
+        <h2 id="quizResultsTitleId" class="quizResultsTitle">Quiz Results</h2>
+        <p id="quizResultsTextId" class="quizResultsText">
+          <span id="quizResultsTimeId">
+            <span id="quizResultsTextTimeId">Time:</span>
+            <span id="quizResultsTextTimeCountdownId">0</span>
+          </span>
+          <span id="quizResultsScoreId">
+            <span id="quizResultsTextScoreId">Score:</span>
+            <span id="quizResultsTextScorecountdownId">0</span>
+          </span>
+        </p>
+
+        <label for="initials">Please Enter Your Initials:</label> <input type="text" id="initialsId" maxlength="3">
+
+        <!-- the input  -->
+        <button type="button" class="btn" id="submitInitials">Submit</button>
+
+      </section>
+          <section class="quizPromptBackGround" id="highScoresId">
+            <h1 class="quizPromptBackGround">Highscores</h1>
+            <div class="quizPromptBackGround" id="scoresId"></div>
+            <button type="button" class="btn" id="clearScoresId">Clear All Scores</button>
+            <button type="button" class="btn" id="quizResultsButtonId">Restart Quiz</button>
+          </section>
+
+    </div>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="github.com/UCLAx-U2/CodingQuizChallenge" target="_blank">GitHub</a>
+      </div>
+      <div class="footer-right">
+        <a href="privacy-policy-license.html" target="_blank">Legal Rights</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+<script>
+
+
+  src = "./assets/js/script.js"
+</script>
+
+</html>

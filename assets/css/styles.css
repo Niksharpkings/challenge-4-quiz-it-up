@@ -1,0 +1,597 @@
+/* -------------------------------------------------Wildcard----------------- */
+* {
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-animation: Loadup 5s linear;
+  animation: Loadup 5s linear;
+  cursor: crosshair;
+
+}
+
+/* @keyframes Loadup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+} */
+/* -------------------------------------------------End Wildcard----------------- */
+/* -------------------------------------------------Body--------------------- */
+
+
+
+body {
+
+  display: inline;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------Nav--------------------- */
+/* Nav bar will need to be a a drop down menu animation and yellow  for the nav links buttons*/
+header {
+  background-image: linear-gradient(to right, rgb(121, 121, 121), rgb(236, 236, 236), rgb(121, 121, 121));
+  border-bottom: 4px solid rgb(0, 255, 221);
+  position: static;
+  margin: 10px;
+  border: 1px solid rgb(6, 255, 180);
+}
+
+
+header nav {
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid rgb(6, 255, 180);
+}
+
+
+header nav div.nav-wrapper {
+  flex-wrap: wrap;
+  padding: 0px;
+  margin: 0px;
+  border: 3px solid rgb(189, 13, 212);
+
+}
+
+header nav div.nav-wrapper a.nav-title {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: hsl(54, 93%, 49%);
+  background-color: blue;
+  border: 3px solid rgb(46, 23, 129);
+}
+
+
+
+header nav div.nav-wrapper ul#nav-links-id.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+header nav div.nav-wrapper ul#nav-links-id.nav-links li {
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-right: 10px;
+}
+
+header nav div.nav-wrapper ul#nav-links-id.nav-links li a {
+  border: 1px solid black;
+  background-color: yellow;
+  color: black;
+  padding: 10px;
+  margin: 3px;
+  font-weight: bold;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  cursor: alias;
+
+}
+
+header nav div.nav-wrapper ul#nav-links-id.nav-links li a:hover {
+  color: blue;
+  text-decoration: none;
+  outline-style: dashed;
+  outline-color: blue;
+  outline-width: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: blue;
+  color: yellow;
+  border: 3px solid blue;
+  cursor: alias;
+}
+
+
+header nav div ul li a:focus {
+  color: blue;
+  text-decoration: none;
+  outline-style: dashed;
+  outline-color: blue;
+  outline-width: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: blue;
+  color: var(--secondary-hex-color);
+  box-shadow: 2 0 1px blue;
+  cursor: alias;
+}
+
+
+/* -------------------------------------------------End Nav--------------------- */
+/* -------------------------------------------------End Header--------------------- */
+
+
+/* -------------------------------------------------main title--------------------- */
+table,
+th,
+td {
+  border: 1px solid rgb(255, 255, 255);
+}
+h2.HighScoreBoard {}
+
+
+
+div.highScoreBackGround {}
+
+div.highScoreBackGround div.viewHighScoreRowClass {}
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails {}
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails summary {}
+
+
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails div#viewTotalHighscores {}
+
+
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table {}
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table colgroup#theScoreboard {}
+
+
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table tbody {}
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table tbody tr {}
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table tbody tr th#nameInitials {}
+
+
+
+div.highScoreBackGround div.viewHighScoreRowClass dialog#highScoreDetails table tbody tr th#pointsAndTime {}
+
+
+
+div.highScoreBackGround div.viewHighScoreRowClass button#viewTotalHighscoresButton.viewScoresButton {}
+
+
+div.eventMainTitle {
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+div.eventMainTitle h1.mainUclaxu2H1 {
+  color: rgb(255, 251, 251);
+}
+
+div.eventMainTitle h1.mainCqcH1 {
+  color: rgb(255, 251, 251);
+}
+
+/* -------------------------------------------------End main title */
+
+/* -------------------------------------------------Prompt Background title--------------------- */
+
+
+div.quizPromptBackGround {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+div.quizPromptBackGround div.viewScoreRowClass { /* view score row */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------TotalHighscores--------------------- */
+div.quizPromptBackGround div.viewScoreRowClass div#viewTotalHighscores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.viewScoreRowClass button#viewTotalHighscoresButton.viewScoresButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(25, 96, 129);
+}
+
+
+
+div.quizPromptBackGround {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+div.quizPromptBackGround h2 {
+  color: rgb(160, 24, 24);
+}
+
+
+
+div.quizPromptBackGround div.viewScoreRowClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(204, 5, 5);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.viewScoreRowClass div#viewTotalHighscores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(10, 106, 170);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.viewScoreRowClass button#viewTotalHighscoresButton.viewScoresButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(212, 0, 219);
+  border-radius: 5px;
+  background-color: rgb(25, 96, 129);
+}
+
+/* -------------------------------------------------endHighscores--------------------- */
+
+/* -------------------------------------------------Timer--------------------- */
+div.quizPromptBackGround {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+div.quizPromptBackGround div.cardtimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.cardtimer span#timer {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+/* -------------------------------------------------End Timer--------------------- */
+
+div.quizPromptBackGround {
+  background-color: rgb(0, 0, 0);
+  border: 1px solid rgb(170, 7, 7);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+div.quizPromptBackGround div.quizPrompBed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(238, 112, 112);
+  border-radius: 5px;
+  background-color: rgb(36, 52, 124);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#introQPBGid.quizPromptBackGround {
+  display: flex;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(10, 163, 184);
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#introQPBGid.quizPromptBackGround h2.quizDialogBox {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#introQPBGid.quizPromptBackGround p.quizDialog {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#introQPBGid.quizPromptBackGround button#startQuiz.btn {
+border: none;
+  background-color: rgb(15, 204, 31);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 26px 16px 16px 20px;
+  padding: 14px 44px;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#quizTime.quizPromptBackGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#quizTime.quizPromptBackGround h1#questionHtml.quizPromptBackGround {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#quizTime.quizPromptBackGround div#answersHtml.quizPromptBackGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#quizTime.quizPromptBackGround div#answersHtml.quizPromptBackGround div.viewScoreRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#quizTime.quizPromptBackGround div#answersHtml.quizPromptBackGround div.viewScoreRow button#0.btn {
+  border: none;
+    background-color: rgb(207, 63, 26);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 26px 16px 16px 20px;
+    padding: 14px 44px;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#scoreInput.quizPromptBackGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#scoreInput.quizPromptBackGround h1.quizPromptBackGround {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#scoreInput.quizPromptBackGround p.quizPromptBackGround {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#scoreInput.quizPromptBackGround p.quizPromptBackGround span#scoreHtml {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#scoreInput.quizPromptBackGround button#submitInitials.btn {
+border: none;
+  background-color: rgb(207, 63, 26);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 26px 16px 16px 20px;
+  padding: 14px 44px;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#highScores.quizPromptBackGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+div.quizPromptBackGround div.quizPrompBed div#highScores.quizPromptBackGround h1.quizPromptBackGround {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#highScores.quizPromptBackGround div#scores.quizPromptBackGround {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px;
+  padding: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#highScores.quizPromptBackGround button#clearScores.btn {
+  border: none;
+    background-color: rgb(207, 63, 26);
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 26px 16px 16px 20px;
+    padding: 14px 44px;
+    cursor: pointer;
+    text-align: left;
+}
+
+
+
+div.quizPromptBackGround div.quizPrompBed div#highScores.quizPromptBackGround button#goBack.btn {
+border: none;
+  background-color: rgb(35, 51, 194);
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+  color: hsl(0, 0%, 100%);
+  display: inline-block;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 26px 16px 16px 20px;
+  padding: 14px 44px;
+  cursor: pointer;
+  text-align: left;
+}
