@@ -1,6 +1,5 @@
 <!Doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,144 +7,253 @@
   <meta name="author" content="">
   <link rel="icon" href="../../../../favicon.ico">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <title>Challenge 4 - UCLAx-U2 Coding Quiz Challenge </title>
+  <title>Challenge 4 - UCLAx-U2 - Quiz It Up </title>
+  <!--- Title Of the Quiz  -->
 </head>
-
 <body>
+  <!--- Body of the page -->
   <header>
+    <!--- Header of the page -->
     <nav>
+      <!--- Navigation of the page -->
       <div class="navWrapper">
-        <a class="navTitle" href="index.html">UCLAx-U2 Coding Quiz</a>
+        <!--- Wrapper for the navigation -->
+        <a class="navTitle" href="index.html">Quiz It Up</a>
+        <!--- Navigation title, link to index.html, Home  -->
         <ul class="navLinks" id="navLinksId">
           <li><a href="index.html">Home</a></li>
-          <li><a href="GitHub.html">GitHub</a></li>
+          <!--- Navigation link, link to  Home page, index.html. (hidden at home page)  -->
+          <li><a href="https://www.GitHub.com/niksharpkings">GitHub</a></li>
+          <!--- Navigation link, link to niksharpkings GitHub account  -->
           <li><a href="about.html">About</a></li>
+          <!--- Navigation link,  to the about page, about.html,  -->
           <li><a href="privacy-policy-license.html">Legal Rights </a></li>
+          <!--- Navigation link, link to the legal rights page, privacy-policy-license.html  -->
         </ul>
+        <!--- End of the navigation links -->
       </div>
+      <!--- End of the navigation wrapper -->
     </nav>
+    <!--- End of the navigation -->
   </header>
-
-  <aside>
-    <h2 class="HighScoreBoard">High Score Board</h2>
-    <div class="highScoreBackGround">
-
-      <div class="viewHighScoreRowClass">
-        <details id="highScoreDetailsId">
-          <summary>Top Highest Scores</summary>
-          <div id="viewTotalHighscoresId">
-
-          </div>
-          <table aria-describedby="theScoreBoard">
-            <colgroup id="theTopScoreboardId" span="1" style="background:red">List of names and there time and scores
-            </colgroup>
-            <tr>
-              <th id="tableNameList">Names</th>
-              <th id="tablePointsAndTime"><span>Points and Time</span></th>
-            </tr>
-            <div>
-              <table aria-describedby="theScoreBoardListedId">
-                <colgroup id="theScoreboardUsersId" span="1" style="background:red">List of names and there time and
-                  scores
-                </colgroup>
-                <tr>
-                  <th id="userNameInitialsId">Username Initials</th>
-                  <td id="usersNameInitalsId">Users name here </td>
+  <!--- End of the header -->
+  <!--- Start of the top 5 ranking High Score Board title -->
+  <div class="top5">
+    <h1>Top 5 High Score Board</h1>
+  </div>
+  <!--- End of the top 5 ranking High Score Board title -->
+  <aside id="leftSide" aria-label="leftaside top five ranking high score board">
+    <!--- <aside> left Aside of the page, left side -->
+    <div class="rightSideBackGround">
+      <h2 class="topHighScoreBoard">The Top 5 Ranking High Score Board</h2>
+      <!--- <div> Top 5 ranking High Score Board title -->
+      <div class="topHighScoreBackGround">
+        <!--- <div>  Top 5 ranking Score Board background -->
+        <div class="viewTopHighScoreRowClass">
+          <!--- <div> tag Top 5 Tanking High Score -->
+          <details id="topHighScoreDetailsId">
+            <!--- <details> tag or Details tag and table for the top highest 5 rankers -->
+            <summary>Top The 5 Highest Scores are:</summary>
+            <!---<summery>  The most top highest ranking high score row -->
+            <div id="viewTotalHighscoresId">
+              <!--- Div tag for the top high score row -->
+              <table id="viewTotalHighscoresTableId" aria-label="top five ranking high score table">
+                <!--- <table> for the very  most top high score and time row name(initials), scores(points), and time(Minute:Seconds:Milliseconds). The top 5 users ranks go by score then by fastest time row -->
+                <tr id="tableInfo">
+                  <!--- Row tag for the top 5 high table info name, scores, and time row -->
+                  <th>Name</th>
+                  <!--- Column tag for the top 5 high score name text (No Changes) row -->
+                  <th>Score</th>
+                  <!--- Column tag for the top 5 high score points/score (No Changes) row -->
+                  <th>Time</th>
+                  <!--- Column tag for the top 5 high score time (No Changes) row -->
                 </tr>
-                <tr>
-                  <th id="timeKeeperId">Time:</th>
-                  <td id="savedCountdownId"><span id="quizCountdownId">0</span></td>
+                <!--- End of the top 5 high score info name, scores, and time row -->
+                <tr id="firstPlaceId">
+                  <!--- Row tag #1 ranking user, Highest score achieve and highest/greatest timer countdown value -->
+                  <td id="firstPlaceInialsId">JAD</td>
+                  <!--- Column tag for the #1 ranking user and there name(initials) (example name: Tom John Ale) Doe (Initials = JAD) (changes based on top score and then top time) row -->
+                  <td id="firstPlaceScoreId">0</td>
+                  <!--- Column tag for the #1 ranking user and there score(points) (changes based on top score and then top time) row -->
+                  <td id="firstPlaceTimeId">00:00:00</td>
+                  <!--- Column tag for the #1 ranking user and there time(Minute:Seconds:Milliseconds) (changes based on top score and then top time) row -->
                 </tr>
-                <tr>
-                  <th id="savedScoreKeeperId">Total Score:</th>
-                  <td id="savedQuizPointsId"><span id="savedQuizPointsId">0</span></td>
+                <!--- End of the #1 ranking user, Highest score achieve and highest/greatest timer countdown value row -->
+                <tr id="secondPlaceId">
+                  <!--- Row tag #2 ranking user, Highest score achieve and highest/greatest timer countdown value -->
+                  <td id="secondPlaceInialsId">TTT</td>
+                  <!--- Column tag for the #2 ranking user and there name(initials)  (example name: Tom Tetty Toesky)(Initials = TTT) (changes based on top score and then top time) row -->
+                  <td id="secondPlaceScoreId">0</td>
+                  <!--- Column tag for the #2 ranking user and there score(points) (changes based on top score and then top time) row -->
+                  <td id="secondPlaceTimeId">00:00:00</td>
+                  <!--- Column tag for the #2 ranking user and there time(Minute:Seconds:Milliseconds) (changes based on top score and then top time) row -->
                 </tr>
+                <!--- End of the #2 ranking user, Highest score achieve and highest/greatest timer countdown value row -->
+                <tr id="thirdPlaceId">
+                  <!--- Row tag #3 ranking user, Highest score achieve and highest/greatest timer countdown value -->
+                  <td id="thirdPlaceInialsId">COB</td>
+                  <!--- Column tag for the #3 ranking user and there name(initials) (example name: CoCo OG Butters ) (Initials = COB) (changes based on top score and then top time) row -->
+                  <td id="thirdPlaceScoreId">0</td>
+                  <!--- Column tag for the #3 ranking user and there score(points) (changes based on top score and then top time) row -->
+                  <td id="thirdPlaceTimeId">00:00:00</td>
+                  <!--- Column tag for the #3 ranking user and there time(Minute:Seconds:Milliseconds) (changes based on top score and then top time) row -->
+                </tr>
+                <!--- End of the #3 ranking user, Highest score achieve and highest/greatest timer countdown value row -->
+                <tr id="fourthPlaceId">
+                  <!--- Row tag #4 ranking user, Highest score achieve and highest/greatest timer countdown value -->
+                  <td id="fourthPlaceInialsId">NAS</td>
+                  <!--- Column tag for the #4 ranking user and there name(initials) (example name: Nik A Sharpio and the Initials are  NAS) (changes based on top score and then top time) row -->
+                  <td id="fourthPlaceScoreId">0</td>
+                  <!--- Column tag for the #4 ranking user and there score(points) (changes based on top score and then top time) row -->
+                  <td id="fourthPlaceTimeId">00:00:00</td>
+                  <!--- Column tag for the #4 ranking user and there time(Minute:Seconds:Milliseconds) (changes based on top score and then top time) row -->
+                </tr>
+                <!--- End of the #4 ranking user, Highest score achieve and highest/greatest timer countdown value row -->
+                <tr id="fifthPlaceId">
+                  <!--- Row tag #5 ranking user, Highest score achieve and highest/greatest timer countdown value -->
+                  <td id="fifthPlaceInialsId">NSA</td>
+                  <!--- Column tag for the #5 ranking user and there name(initials) (example name: Nice Sexy Ass and the name(Initials)= NSA) (changes based on top score and then top time) row -->
+                  <td id="fifthPlaceScoreId">0</td>
+                  <!--- Column tag for the #5 ranking user and there score(points) (changes based on top score and then top time) row -->
+                  <td id="fifthPlaceTimeId">00:00:00</td>
+                  <!--- Column tag for the #5 ranking user and there time(Minute:Seconds:Milliseconds) (changes based on top score and then top time) row -->
+                </tr>
+                <!--- End of the #5 ranking user, Highest score achieve and highest/greatest timer countdown value row -->
               </table>
+              <!--- End of the top 5 high score and time row name(initials), scores(points), and time(Minute:Seconds:Milliseconds) table -->
             </div>
-          </table>
-        </details>
-        <button onclick="topHighScore()" type="button" class="btn" id="viewTotalHighscoresButtonId">👉View
-          Scores👈</button>
+            <!--- End of the top high score row -->
+          </details>
+          <!--- End of the top high score row -->
+        </div>
+        <!--- End of the top 5 ranking Score Board background -->
+      </div>
+      <!--- End of the top 5 ranking Score Board background -->
+    </div>
+    <!--- End of the top 5 ranking High Score Board title -->
+  </aside>
+  <button onclick="topHighScore()" type="button" class="btn" id="viewTotalHighscoresButtonId">👉View
+    Scores👈</button>
+  <!--- Button to view the top 5 high scores and drops down the details]-->
+  <!--- End of the top 5 ranking High Score Board title -->
+  <!--- User Last known time, hidden during first load of the index.html, will show last stats ( score and time) from the last quiz submission  -->
+  <aside id="lastKnownStatsId" class="lastKnownStats" aria-label="User Last known time and score">
+    <div id="lastKnownStatsTitleId" class="lastKnownStatsTitle">
+      <!--- Last known time and score title -->
+      <h2>Last Quiz Stats</h2>
+      <!---Last Quiz Stats title -->
+    </div>
+    <div id="lastKnownStatsContentId" class="lastKnownStatsContent">
+      <!--- Last known time and score content -->
+      <div id="lastKnowTititialsId" class="lastKnowTititialsScore">
+        <!--- Last known time and score content -->
+        <p>Initials: <span id="lastKnowititialsId"></span></p>
+        <!---User Initials -->
+      </div>
+      <div id="lastKnownStatsScoreContentId" class="lastKnownStatsScoreContent">
+        <!--- Last known score content -->
+        <p>Score: <span id="lastKnownStatsScoreId">0</span></p>
+        <!---User Score -->
+      </div>
+      <div id="lastKnownTimeContentTimeId" class="lastKnownTimeContentTime">
+        <!--- Last known time content -->
+        <p>Time: <span id="lastKnownTimeTimeId">00:00:00</span></p>
+        <!---User Time -->
       </div>
     </div>
+    <!--- End of the Last known time and score content -->
   </aside>
-
+  <!--- End of the Last known time and score title -->
+  <!--- End of the Last known time and score title -->
+  <!--- Main content of the index.html page -->
   <main>
-    <div id="quizPromptBackGroundId" class="quizPromptBackGround">
-
-      <section id="sectionQuizPromptId" class="sectionQuizPrompt">
-        <div id="quizPromptIntroId" class="quizpromptIntro">
-          <h2 class="quizPromptBackGroundH2">Coding Quiz Challenge</h2>
-          <p class="introDialog">Quiz is on a timer.<br>
-            Incorrect chooses will deduct the time and score. <br>
-            On yah ready, set, ...!
-          </p>
-          <button id="startQuizButtonId" class="startQuizButton">Start Quiz, GO !</button>
+    <div id="quizBackGroundId" class="quizBackGround">
+      
+      <div id="quizInfoPromptId" class="quizInfopromptIntro"> <!-- Quiz Info prompt <div> will Hide itself when the quiz start button is pressed -->
+        <h1 id="introChallengePromptId" class="introChallengePrompt">Coding Quiz Challenge</h1> <!--- Quiz Challenge prompt title. -->
+        <p id="introInfoId" class="introInfo">Quiz is on a timer.
+          <br>
+          Incorrect chooses will deduct the time and score.
+          <br>
+          On yah ready, set, ...!
+        </p>
+        <button onclick="quizStart()" type="button" class="btn" id="quizStartButtonId">Quiz Start</button> <!-- quiz start button-->
+      </div>
+      <!--- End of the Quiz Info prompt <div> will Hide itself when the quiz start button is pressed-->
+      <!--- End of the Quiz prompt content. -->
+      
+      
+      <!-- The Quiz Prompt Content begins-->
+      <!-- Everything below until Quiz Start is pressed, except sectionQuizResults will remain hidden until the submitAnswerButton is pressed-->
+      
+      <!-- the Active current time and score: Appears only during the start of the quiz -->
+      <div id="quizMainId" class="theQuizMain">
+      <div id="quizTimeAndScoreId" class="quizTimeAndScore">
+        <div id="quizTimeId" class="quizTime">
+          <p>Time: <span id="quizTimeSpanId">00:00:00</span></p>
+          <!--- Score counter starting value of  "0". will increase by 5 seconds for correct answer and -5 seconds for the incorrect answer, will continue counting until all five question are submitted with there answers. -->
         </div>
-      </section>
-
-      <section id="sectionQuizPromptMainId" class="sectionQuizpromptMainId">
-        <div class="quizQuestions">
-          <div class="quizTimerScoreBox" id="quizTimerScoreBoxId">
-          <div class="quizTimeResults">
-            <p class="quizTimer">Quiz Timer: </p>
-            <span id="quizTimerId">0</span>
-          </div>
-          <div class="quizScoreResults">
-            <p class="quizScoreResultsText">Score: </p>
-            <span id="quizCountResultsScore">0</span>
+        <div id="quizScoreId" class="quizScore">
+          <p>Score: <span id="quizScoreSpanId">0</span></p>
+          <!--- Score counter starting value of  "0". will increase by 20 points for correct answer and -20 for the incorrect answer, will continue counting until all five question are submitted with there answers. -->
         </div>
-        
+      </div>
+      
+      <!--- Quiz question content -->
+      <div id="quizQuestionsVarId" class="quizQuestionsVar">
+        <!--- this Quiz prompt content this div will show when the start quiz button is selected -->
+        <h2 id="questionTextId" class="questionText">Question:<span id="questionNumber">1</span></h2>
+        <!--- Question prompt title. Span questionNumber will change its value based which question its on (1-5).  Will appear when user presses startQuizButton.  -->
+        <p id="descriptionId" class="description"></p>
+        <!---The Asked Question goes Here corresponds to the QuestionNumber: "value".  Question prompt description will change with the question its on. .Will appear when user presses startQuizButton. -->
+        <div id="ChoicesId" class="Choices">
+          <!--- Quiz Choices content Will appear when user presses startQuizButtonId and will be used for the Choices array. Select one of 4 buttons. correct answer is (true) from the Choices: array. answer = Answer: "(true)".-->
+          <button onclick="quizAnswer(1)" id="ChoicesOptionOneId" class="ChoicesOptionOne"></button>
+          <!--- Option One button. Will appear when user presses startQuizButtonId and will be used for the Choices array. -->
+          <button onclick="quizAnswer(2)" id="ChoicesOptionTwoId" class="ChoicesOptionTwo"></button>
+          <!--- Option Two button. Will appear when user presses startQuizButtonId.  -->
+          <button onclick="quizAnswer(3)" id="ChoicesOptionThreeId" class="ChoicesOptionThree"></button>
+          <!--- Option Three button. Will appear when user presses startQuizButtonId.  -->
+          <button onclick="quizAnswer(4)" id="ChoicesOptionFourId" class="ChoicesOptionFour"></button>
+          <!--- Option Four button. Will appear when user presses startQuizButtonId.  -->
+        </div> <!--- End of the Quiz question content -->
+      
+        <div id="QuizButtonsId" class="QuizButtons">
+          <!--- sectionQuizButtonsId user presses startQuizButtonId and will be used for the selection of choices as a submission buttony. -->
+          <button onclick="nextQuestion()" id="nextQuestionButtonId" class="nextQuestionButton">Next Question</button>
+          <!--- Next Question button. Will appear when user presses startQuizButtonId and disappear on the 4th question  -->
+          <button onclick="submitAnswer()" id="submitAnswerButtonId" class="submitAnswerButton">Submit Answer</button>
+          <!--- Submit Answer button. will appear only on the 5th question  -->
         </div>
-          <h2 id="QuestionId" class="Question">Question:</h2>
-          <p id="chosesId" class="choses">
-            <label for="selection">
-              <input type="radio" name="selection" id="selection1Id" value="1">
-              <span id="answer1Id">selection</span>
-            </label>
-            <label for="selection">
-              <input type="radio" name="selection" id="selection2Id" value="2">
-              <span id="answer2Id">selection</span>
-            </label>
-            <label for="selection">
-              <input type="radio" name="selection" id="selection3Id" value="3">
-              <span id="answer3Id">selection</span>
-            </label>
-            <label for="selection">
-              <input type="radio" name="selection" id="selection4Id" value="4">
-              <span id="answer4Id">selection</span>
-            </label>
-          </p>
-          <button type="button" class="btn" id="submitAnswerButtonId">Submit Answer</button>
-        </div>
-      </section>
-
-      <section id="sectionQuizResultsId" class="sectionQuizResults">
+        <!--- End of the Quiz Buttons content -->
+      </div>
+    </div> <!--- End of the Quiz Main content. End of the Quiz prompt content this div will show when the start quiz button is selected -->
+      
+      <!-- The Quiz Results-->
+      
+      <!-- Results of the quiz after the 5th question was answered and the submit answer button was clicked on -->
+      <div id="sectionQuizResultsId" class="sectionQuizResults"> <!--- sectionQuizResultsId div id will appear only on the 5th question is answered by hitting the submit answer button  -->
         <h2 id="quizResultsTitleId" class="quizResultsTitle">Quiz Results</h2>
         <p id="quizResultsTextId" class="quizResultsText">
           <span id="quizResultsTimeId">
-            <span id="quizResultsTextTimeId">Time:</span>
-            <span id="quizResultsTextTimeCountdownId">0</span>
+            <span id="quizResultsTextTimeId">Time:</span> <!--- Quiz Results Time:  -->
+            <span id="quizResultsTextTimeCountdownId">0</span>  <!--- Quiz Results Time:  -->
           </span>
           <span id="quizResultsScoreId">
-            <span id="quizResultsTextScoreId">Score:</span>
-            <span id="quizResultsTextScorecountdownId">0</span>
+            <span id="quizResultsTextScoreId">Score:</span> <!--- Quiz Results total Score:  -->
+            <span id="quizResultsTextScorecountdownId">0</span> <!--- Quiz Results total Score:  -->
           </span>
         </p>
-
-        <label for="initials">Please Enter Your Initials:</label> <input type="text" id="initialsId" maxlength="3">
-
+        <label for="initials">Please Enter Your Initials:</label> <input type="text" id="initialsId" maxlength="3"> <!--- Quiz Results initial:  -->
         <!-- the input  -->
-        <button type="button" class="btn" id="submitInitials">Submit</button>
-
-      </section>
-          <section class="quizPromptBackGround" id="highScoresId">
-            <h1 class="quizPromptBackGround">Highscores</h1>
-            <div class="quizPromptBackGround" id="scoresId"></div>
-            <button type="button" class="btn" id="clearScoresId">Clear All Scores</button>
-            <button type="button" class="btn" id="quizResultsButtonId">Restart Quiz</button>
-          </section>
-
+        <button type="button" class="btn" id="submitInitials">Submit</button> <!--- Quiz Results submit button  -->
+      </div>
+      <div class="quizPromptBackGround" id="highScoresId"> <!--- sectionQuizResultsId div id will appear when the Quiz Results submit button is triggered  -->
+        <h1 class="quizPromptBackGround">Highscores</h1> 
+        <div class="quizPromptBackGround" id="scoresId"></div>
+        <button type="button" class="btn" id="clearScoresId">Clear All Scores</button> <!--- Quiz Results clear button. it will clear all of the 5 top high scores  -->
+        <button type="button" class="btn" id="quizResultsButtonId">Restart Quiz</button> <!-- back to quizInfoPrompt-->
+      </div>
     </div>
   </main>
   <footer>
@@ -159,11 +267,5 @@
     </div>
   </footer>
 </body>
-
-<script>
-
-
-  src = "./assets/js/script.js"
-</script>
-
+<script>src = "./assets/js/script.js"</script>
 </html>
