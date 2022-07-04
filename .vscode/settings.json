@@ -6,5 +6,7 @@
   "emmet.showSuggestionsAsSnippets": true,
   "workbench.hover.delay": 400,
   "workbench.sash.hoverDelay": 200,
-  "workbench.view.alwaysShowHeaderActions": true
+  "workbench.view.alwaysShowHeaderActions": true,
+  "eslint.enable": false,
+  "deepscan.enable": true
 }

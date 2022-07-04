@@ -1,62 +1,56 @@
+const startCountdownTimer = (_timeCount, duration) => {
+  var exp = Date.now() + duration; //expires in now + duration milliseconds
 
-
-
-function startCountdownTimer(_timeCount,duration){
-  const exp = Date.now() + duration;//expires in now + duration milliseconds
-  
   //callback using window.requestAnimationFrame if available else setTimeout at 60fps:
-  const rAF = window.requestAnimationFrame || ((callback) => { window.setTimeout(callback, 1000 / 60); });
-  
+  var rAF =
+    window.requestAnimationFrame ||
+    function (callback) {
+      window.setTimeout(callback, 1000 / 60);
+    };
+
   //left-pad with leading zeros
-  function pad(n, s = 2) {
-    return ('0'.repeat(s) + n).slice(-s);
-  }
-  
-  //The loopy bit:
-  (function tick() {
-    const remaining = Math.max((exp - Date.now()) / 1000, 0);
-    const remainingMinutes = Math.floor(remaining / 60);
-    const remainingSeconds = Math.floor(remaining % 60);
-    const remainingMilliseconds = Math.floor((remaining % 1) * 1000);
-    timeCount.textContent = `${pad(remainingMinutes)}:${pad(remainingSeconds)}:${pad(remainingMilliseconds, 3)}`;
-    if (remaining <= 0) {
-      //stop the timer:
-      window.cancelAnimationFrame(tick);
-      timeCount.textContent = "Time's up!";
-      timeCount.appendChild(stopWatchIcon);
-      submitAnswerBtn.style.display = "block";
-      return;
+  let pad = (n, s = 2) => {
+    return `00000${n}`.substr(-s);
+  };
+
+  (function update() {
+    const n = Date.now();
+    const e = exp - n;
+    const ms = e % 1000;
+    const s = (e / 1000) % 60 >> 0;
+    const m = (e / (1000 * 60)) % 60 >> 0;
+
+    if (e > 0) {
+      // @ts-ignore
+      timeCount.innerHTML = `${pad(m)}:${pad(s)}:${pad(ms, 3)}`;
+      rAF(update);
+    } else {
+      // @ts-ignore
+      window.cancelAnimationFrame(rAF);
+
+      // } else {
+      //     timeount.innerHTML = "00:00:00:000";
+
+      // }
     }
-    if (remaining > 0) {
-      rAF(tick);
-    }   
   })();
-}
+};
 
-  // (function update() {
-  //   var n = Date.now(), 
-  //     e = (exp - n),
-  //     ms = (e % 1000),
-  //     s = ((e / 1000) % 60) >> 0,
-  //     m = ((e / (1000 * 60)) % 60) >> 0
-  //   if (e > 0) {
-  //     timeCount.innerHTML = pad(m) + ":" + pad(s) + ":" + pad(ms, 3);
-  //     rAF(update);
-  //     // } else {
-  //     //     timeount.innerHTML = "00:00:00:000";
-      
-  //     // }
-  //   }
-  // })();
-
-
-
-
-
+var now = (function () {
+  var perf = window.performance || {};
+  // @ts-ignore
+  var fn = perf.now || perf.mozNow || perf.webkitNow || perf.msNow || perf.oNow;
+  // fn.bind will be available in all the browsers that support the advanced window.performance... ;-)
+  return fn
+    ? fn.bind(perf)
+    : function () {
+        return new Date().getTime();
+      };
+})();
 
 //   counter = setInterval(myTimer, 1000);
 //   function myTimer() {
-    
+
 //     startValue--;
 //     timeCount.innerHTML = `${startValue}`;
 //     if (startValue === 0) {
@@ -81,27 +75,32 @@ function startCountdownTimer(_timeCount,duration){
 //       timeCount.innerHTML = "Time's up!";
 //       timeBar.style.display = "none";
 //     }
-//   } 
-  
+//   }
+
 // }
 
-
-
-// //// Start Timer Bar 
+// //// Start Timer Bar
 function startTimerBar() {
-
   counterBarLine = setInterval(() => {
     let widthValue = 0;
-    widthValue = ((startValue * 100) / 100); 
-    timeBar.appendChild(timerIcon).textContent = `   ${Math.floor(((widthValue * 100) / 100) )}%`;
+    widthValue = (100 * 100) / 100;
+    // @ts-ignore
+    timeBar.appendChild(timerIcon).textContent = `   ${Math.floor(
+      (widthValue * 100) / 100
+    )}%`;
     timerIcon.style.lineHeight = "0px";
     timerIcon.style.fontSize = "20px";
+    // @ts-ignore
     timeBar.style.width = `${widthValue}%`;
+    // @ts-ignore
     timeBar.appendChild(timerIcon);
     if (widthValue === 0) {
       clearInterval(counterBarLine);
+      // @ts-ignore
       submitAnswerBtn.style.display = "none";
+      // @ts-ignore
       timeCount.innerHTML = "Time's up!";
+      // @ts-ignore
       timeCount.appendChild(stopWatchIcon);
       timeInterval = setInterval(() => {
         startTimerBar();
@@ -120,106 +119,158 @@ var start = true;
 function startingQuiz(id) {
   startCountdownTimer();
   startTimerBar();
+  // @ts-ignore
   submitAnswerBtn.style.display = "none";
 
-
   var result = document.getElementsByClassName("result");
-  result[0].innerText = ""
-  
+  // @ts-ignore
+  result[0].innerText = "";
+
   const question = document.getElementById("questionId");
 
   // Setting the question text
+  // @ts-ignore
   question.innerText = questionsArray[id].q;
 
-  const op1 = document.getElementById('op1');
-  const op2 = document.getElementById('op2');
-  const op3 = document.getElementById('op3');
-  const op4 = document.getElementById('op4');
+  const op1 = document.getElementById("op1");
+  const op2 = document.getElementById("op2");
+  const op3 = document.getElementById("op3");
+  const op4 = document.getElementById("op4");
 
+  // @ts-ignore
   op1.innerHTML = questionsArray[id].answers[0].option;
+  // @ts-ignore
   op2.innerHTML = questionsArray[id].answers[1].option;
+  // @ts-ignore
   op3.innerHTML = questionsArray[id].answers[2].option;
+  // @ts-ignore
   op4.innerHTML = questionsArray[id].answers[3].option;
 
+  // @ts-ignore
   op1.value = questionsArray[id].answers[0].correct;
+  // @ts-ignore
   op2.value = questionsArray[id].answers[1].correct;
+  // @ts-ignore
   op3.value = questionsArray[id].answers[2].correct;
+  // @ts-ignore
   op4.value = questionsArray[id].answers[3].correct;
 
- 
-
+  // @ts-ignore
   op1.addEventListener("click", () => {
+    // @ts-ignore
     op1.style.backgroundColor = "lightgoldenrodyellow";
+    // @ts-ignore
     op2.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
     op3.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
     op4.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
     selected = op1.value;
-  })
+  });
 
-    // Show selection for op2
-    op2.addEventListener("click", () => {
-      op1.style.backgroundColor = "lightskyblue";
-      op2.style.backgroundColor = "lightgoldenrodyellow";
-      op3.style.backgroundColor = "lightskyblue";
-      op4.style.backgroundColor = "lightskyblue";
-      selected = op2.value;
-    })
+  // Show selection for op2
+  // @ts-ignore
+  op2.addEventListener("click", () => {
+    // @ts-ignore
+    op1.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op2.style.backgroundColor = "lightgoldenrodyellow";
+    // @ts-ignore
+    op3.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op4.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    selected = op2.value;
+  });
 
-    // Show selection for op3
-    op3.addEventListener("click", () => {
-      op1.style.backgroundColor = "lightskyblue";
-      op2.style.backgroundColor = "lightskyblue";
-      op3.style.backgroundColor = "lightgoldenrodyellow";
-      op4.style.backgroundColor = "lightskyblue";
-      selected = op3.value;
-    })
+  // Show selection for op3
+  // @ts-ignore
+  op3.addEventListener("click", () => {
+    // @ts-ignore
+    op1.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op2.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op3.style.backgroundColor = "lightgoldenrodyellow";
+    // @ts-ignore
+    op4.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    selected = op3.value;
+  });
 
-    // Show selection for op4
-    op4.addEventListener("click", () => {
-      op1.style.backgroundColor = "lightskyblue";
-      op2.style.backgroundColor = "lightskyblue";
-      op3.style.backgroundColor = "lightskyblue";
-      op4.style.backgroundColor = "lightgoldenrodyellow";
-      selected = op4.value;
-    })
-  
-    const evaluate = document.getElementsByClassName("evaluate");
+  // Show selection for op4
+  // @ts-ignore
+  op4.addEventListener("click", () => {
+    // @ts-ignore
+    op1.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op2.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op3.style.backgroundColor = "lightskyblue";
+    // @ts-ignore
+    op4.style.backgroundColor = "lightgoldenrodyellow";
+    // @ts-ignore
+    selected = op4.value;
+  });
+
+  const evaluate = document.getElementsByClassName("evaluate");
 
   evaluate[0].addEventListener("click", () => {
     if (selected === "true") {
+      // @ts-ignore
       result[0].innerText = "Correct!";
+      // @ts-ignore
       result[0].style.color = "green";
+      // @ts-ignore
       result[0].style.fontSize = "20px";
+      // @ts-ignore
       result[0].style.fontWeight = "bold";
+      // @ts-ignore
       result[0].style.textAlign = "center";
+      // @ts-ignore
       result[0].style.margin = "0px";
+      // @ts-ignore
       result[0].style.padding = "10px";
+      // @ts-ignore
       result[0].style.borderRadius = "10px";
+      // @ts-ignore
       result[0].style.backgroundColor = "lightgoldenrodyellow";
     } else {
+      // @ts-ignore
       result[0].innerText = "Wrong!";
+      // @ts-ignore
       result[0].style.color = "red";
+      // @ts-ignore
       result[0].style.fontSize = "20px";
+      // @ts-ignore
       result[0].style.fontWeight = "bold";
+      // @ts-ignore
       result[0].style.textAlign = "center";
+      // @ts-ignore
       result[0].style.margin = "0px";
+      // @ts-ignore
       result[0].style.padding = "10px";
+      // @ts-ignore
       result[0].style.borderRadius = "10px";
+      // @ts-ignore
       result[0].style.backgroundColor = "lightgoldenrodyellow";
     }
-  })
-  }
-
+  });
+}
 
 const introSection = document.querySelector(".introSection");
 const quizSection = document.querySelector(".quizSection");
 const resultSection = document.querySelector(".resultSection");
-const welcomeBtnInfo = document.getElementById('welcomeBtnInfo');
+const welcomeBtnInfo = document.getElementById("welcomeBtnInfo");
+// @ts-ignore
 const welcomeBtn = welcomeBtnInfo.querySelector("#welcomeBtn");
 const introPromptPanel = document.querySelector(".introPromptPanel");
 const quizPromptPanel = document.querySelector(".quizPromptPanel");
 const resultPromptPanel = document.querySelector(".resultPromptPanel");
-const timerCountdown = document.querySelector(".timerContainer .timerCountdown");
+const timerCountdown = document.querySelector(
+  ".timerContainer .timerCountdown"
+);
 const timeBar = document.querySelector("aside .timeBar");
 const timeText = document.querySelector(".timerContainer .timeRemaining");
 const timeCount = document.querySelector(".timerContainer .timerCountdown");
@@ -236,10 +287,10 @@ const nextQuestionBtn = document.querySelector("footer .nextQuestionBtn");
 const submitAnswerBtn = document.querySelector("footer .submitAnswerBtn");
 const questionTotalCount = document.querySelector("footer .questionTotalCount");
 const quitMainBtn = document.querySelector("footer .quitMainBtn");
+// @ts-ignore
 const restartBtn = resultPromptPanel.querySelector(".buttons .restartBtn"); //selecting restart button
+// @ts-ignore
 const quit_quiz = resultPromptPanel.querySelector(".buttons .mainMenuBtn"); // if quitQuiz button clicked
-
-
 
 /// Question Arrays and Variables for quiz questions and answers (starts when user press continue button in intro section) ///
 const questionsArray = [
@@ -250,8 +301,8 @@ const questionsArray = [
       { option: "strings", correct: false },
       { option: "booleans", correct: false },
       { option: "alerts", correct: true },
-      { option: "numbers", correct: false }
-    ]
+      { option: "numbers", correct: false },
+    ],
   },
   {
     id: 1,
@@ -260,8 +311,8 @@ const questionsArray = [
       { option: "quotes", correct: false },
       { option: "curly brackets", correct: true },
       { option: "parentheses", correct: false },
-      { option: "square brackets", correct: false }
-    ]
+      { option: "square brackets", correct: false },
+    ],
   },
   {
     id: 2,
@@ -270,8 +321,8 @@ const questionsArray = [
       { option: "numbers and strings", correct: false },
       { option: "other arrays", correct: false },
       { option: "booleans", correct: false },
-      { option: "all of the above", correct: true }
-    ]
+      { option: "all of the above", correct: true },
+    ],
   },
   {
     id: 3,
@@ -280,8 +331,8 @@ const questionsArray = [
       { option: "commas", correct: false },
       { option: "curly brackets", correct: false },
       { option: "quotes", correct: true },
-      { option: "parentheses", correct: false }
-    ]
+      { option: "parentheses", correct: false },
+    ],
   },
   {
     id: 4,
@@ -290,17 +341,17 @@ const questionsArray = [
       { option: "terminal", correct: false },
       { option: "for loops", correct: false },
       { option: "console.log()", correct: true },
-      { option: "JavaScript", correct: false }
-    ]
-  }
+      { option: "JavaScript", correct: false },
+    ],
+  },
 ];
-let startValue = 75.00;
+let startValue = 75.0;
 //// let variables for quiz
 let counterBar; //counterBar variable
 let counter;
 let timeInterval;
 let timeBarLine;
-let counterBarLine; //counterBarLine variable 
+let counterBarLine; //counterBarLine variable
 let userPoints = 0;
 let userScore = 0;
 
@@ -312,23 +363,35 @@ if (start) {
 }
 let id = 0;
 
+// @ts-ignore
 welcomeBtn.onclick = () => {
+  // @ts-ignore
   introSection.style.display = "block"; //show introSection element
+  // @ts-ignore
   welcomeBtn.style.display = "none"; //hide introPromptPanel element
 };
 
+// @ts-ignore
 mainMenuBtn.onclick = () => {
+  // @ts-ignore
   introSection.style.display = "none"; //hide introSection element
+  // @ts-ignore
   welcomeBtn.style.display = "block"; //show introPromptPanel element
 };
 
+// @ts-ignore
 continueBtn.onclick = () => {
+  // @ts-ignore
   resultPromptPanel.style.display = "none"; //hide resultPromptPanel element
+  // @ts-ignore
   introSection.style.display = "none"; //hide introSection element
+  // @ts-ignore
   quizSection.style.display = "block"; //show quizSection element
+  // @ts-ignore
   quizPromptPanel.style.display = "block"; //show quizPromptPanel element
 };
 
+// @ts-ignore
 nextQuestionBtn.onclick = () => {
   if (id < 4) {
     id++;
@@ -336,21 +399,20 @@ nextQuestionBtn.onclick = () => {
     console.log(id);
   }
   if (id == 4) {
+    // @ts-ignore
     submitAnswerBtn.style.display = "block";
   }
 };
 
-submitAnswerBtn.onclick = () => { 
+// @ts-ignore
+submitAnswerBtn.onclick = () => {
   clearInterval(counter);
+  // @ts-ignore
   resultPromptPanel.style.display = "block"; //show resultPromptPanel element
 };
 
-
-
-
-
-startCountdownTimer(document.getElementById('timer'),75000);
-
+startCountdownTimer(document.getElementById("timer"), 15000);
+console.log(questionsArray[0]);
 
 // nextQuestionBtn.onclick = () => {
 //     if (questionCount < id.length - 1) { //if question count is less than total question length
@@ -368,12 +430,9 @@ startCountdownTimer(document.getElementById('timer'),75000);
 //     }
 // };
 
-
-
 // quit_quiz.onclick = () => {
 //   window.location.reload(); //reload the current window
 // };
-
 
 // restartBtn.onclick = () => {
 //   quizPromptPanel.classList.add("infoQuiz");
@@ -386,9 +445,8 @@ startCountdownTimer(document.getElementById('timer'),75000);
 //   clearInterval(counterBarLine); //clear counterBarLine
 // };
 
-
-
 // submitAnswerBtn.onclick = () => {
 //   resultSection.style.display = "block"; //show resultSection element
 //   // showResult(); //calling showResult function
 // };
+
