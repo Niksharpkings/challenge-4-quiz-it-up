@@ -1,18 +1,16 @@
-*
-dist
+#ignore dist*
+dist*
 
-notes.txt.bak
+notes.txt.bak*
 
-.dccache
+*.dccache
 
-.DS_Store
+*.DS_Store*
 
-.git
+*.vscode*
 
-.vscode
+*.history*
 
-.history
+*.vs*
 
-.vs
-
-index.html.bak
+index.html.bak*
