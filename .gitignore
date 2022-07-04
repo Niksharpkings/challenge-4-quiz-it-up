@@ -109,3 +109,4 @@ notes.txt.bak
 **/.vs
 index.html.bak
 temp/
+node_modules
