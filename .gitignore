@@ -1,2 +1,9 @@
 dist
 notes.txt.bak
+.dccache
+.DS_Store
+.git
+.vscode
+.history
+.vs
+index.html.bak
