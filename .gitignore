@@ -102,9 +102,8 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,visualstudiocode
 dist*
-.dccache
 *.dccache
-.vscode
-.history
-.vs
+*.vscode
+*.history
+*.vs
 index.html.bak
