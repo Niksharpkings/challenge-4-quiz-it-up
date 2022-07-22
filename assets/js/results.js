@@ -25,5 +25,5 @@ let saveHighScore = (e) => {
     topFive.splice(5);
 
     localStorage.setItem('topFive', JSON.stringify(topFive));
-    window.location.assign('../../pages/topFive.html');
+    window.location.assign('/index.html');
 };
