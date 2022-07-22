@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Quiz it Up" />
+  <meta name="author" content="niksharpkings" />
+  <link rel="icon" href="../../../../favicon.ico" />
+  <!--- Title Of the Quiz  -->
+  <title>Challenge 4 - UCLAx-U2 - Quiz It Up</title>
+  <link rel="stylesheet" href="../assets/css/results.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div>
+    <header class="navHeader">
+      <nav>
+        <div class="navWrapper">
+          <a class="navTitle" href="../index.html">Quiz It Up!</a>
+          <ul class="navLinks" id="navLinksId">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://www.GitHub.com/niksharpkings">GitHub</a></li>
+            <li><a href="topfive.html">Ranks</a></li>
+            <li>
+              <a href="./pages/privacy-policy-license.html">Legal Rights </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div id="loader"></div>
+  <div>
+    <section class="resultSection">
+      <div class="resultPromptPanel">
+        <div class="resultScore" id="finalPoints">
+          0
+          <!--Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="icon"><em class="fas fa-trophy"></em></div>
+        <div class="resultComplete" id="end">
+          Nice job finished the quiz, here is your results
+        </div>
+        <div class="resultTime">
+          <!--Here I've inserted Time Result from JavaScript -->
+        </div>
+        <div class="resultRank">
+          <!--Here I've inserted Rank Result from JavaScript -->
+        </div>
+            <form>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="username"
+              />
+              <button
+                type="submit"
+                class="btn"
+                id="saveScoreBtn"
+                onclick="saveHighScore(event)"
+                disabled
+              >
+                Save
+              </button>
+            </form>
+            <div class="buttons">
+              <button class="restartBtn" href="./game.html">Restart Quiz</button>
+              <button class="mainMenuBtn" href="../index.html">Main Menu</button>
+            </div>
+        </div>
+    </section>
+  </div>
+  <script src="../assets/js/results.js"></script>
+  <script src="../assets/js/game.js"></script>
+</body>
+
+</html>

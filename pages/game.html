@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Quiz it Up" />
+  <meta name="author" content="niksharpkings" />
+  <link rel="icon" href="../../../../favicon.ico" />
+  <!--- Title Of the Quiz  -->
+  <title>Challenge 4 - UCLAx-U2 - Quiz It Up</title>
+  <link rel="stylesheet" href="../assets/css/game.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <div>
+    <header class="navHeader">
+      <nav>
+        <div class="navWrapper">
+          <a class="navTitle" href="../index.html">Quiz It Up!</a>
+          <ul class="navLinks" id="navLinksId">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://www.GitHub.com/niksharpkings">GitHub</a></li>
+            <li><a href="./topfive.html">Ranks</a></li>
+            <li>
+              <a href="./privacy-policy-license.html">Legal Rights </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <div id="loader"></div>
+  <div>
+    <section class="quizSection">
+      <div class="quizPromptPanel">
+        <aside class="quizAside">
+          <div class="quizTitle"></div>
+          <div class="timerContainer" id="timer">
+            <div class="timeRemaining">
+              <span class="fa fa-user-clock">Timer:</span>
+            </div>
+            <div class="timerCountdown" id="timerCountdown">0</div>
+          </div>
+          <div class="timeBar"></div>
+        </aside>
+        <div class="points" id="points">
+          <div class="pointsSystem">
+            <span class="fa fa-user-clock">
+              <span class="pointsText">Points:</span>
+              <span class="pointsTotal">0</span>
+            </span>
+          </div>
+        </div>
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+        </div>
+        <section id="game" class="questionText">
+          <div class="questionAsked" id="questionId">
+            <!-- Here I've inserted question from JavaScript -->
+          </div>
+          <div class="optionAsked" id="optionId">
+            <div class="row">
+              <p class="selection-prefix"></p>
+              <p type="button" class="selection-text" data-number="1">
+                option1
+              </p>
+            </div>
+            <div class="row">
+              <p class="selection-prefix"></p>
+              <p type="button" class="selection-text" data-number="2">
+                option2
+              </p>
+            </div>
+            <div class="row">
+              <p class="selection-prefix"></p>
+              <p type="button" class="selection-text" data-number="3">
+                option3
+              </p>
+            </div>
+            <div class="row">
+              <p class="selection-prefix"></p>
+              <p type="button" class="selection-text" data-number="4">
+                option4
+              </p>
+            </div>
+            <!-- Here I will insert the options from  -->
+          </div>
+        </section>
+        <!-- footer of Quiz Box -->
+        <footer>
+          <div class="questionTotalCount">
+            <!-- inserted Question Count Number from JS -->
+          </div>
+          <a type="button" class="exitQuizBtn" href="../index.html" >Quit Quiz</a>
+          <a type="button" class="leaderboardBtn" href="./topfive.html" >Leader Board</a>
+        </footer>
+      </div>
+    </section>
+  </div>
+  <!-- end Quiz Box -->
+  <script src="../assets/js/game.js"></script>
+  <script src="../assets/js/timer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #165ca7;
+  background: #ffff01;
+  
+}
+#finalPoints {
+  text-shadow: 2px 2px rgb(1, 255, 69);
+  color: rgb(0, 85, 255);
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+#rankList {
+  text-shadow: 2px 2px rgb(1, 255, 69);
+  color: rgb(0, 76, 255);
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  list-style: none;
+}
+
+.finalPoints:hover {
+  transform: scale(1.025);
+}

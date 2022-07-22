@@ -1,0 +1,309 @@
+.introSection
+{
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif, 'Roboto', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Arial Unicode MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', 'Verdana', 'sans-serif';
+}
+
+header {
+  display: flex;
+  position: static;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  flex: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  font-size: 25px;
+  text-shadow: 2px 2px 4px #000000;
+  text-align: center;
+  padding: 20px;
+  padding-top: 0px;
+  color: hsl(0, 0%, 100%);
+}
+
+header nav div.navWrapper a.navTitle {
+  color: rgb(217, 255, 0);
+  font-size: 3em;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 2px 2px rgb(162, 16, 247);
+  text-align: center;
+  font-style: italic;
+  border-bottom: 1px solid rgb(255, 0, 170);
+}
+
+header nav div ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  font-size: 25px;
+  text-shadow: 2px 2px 4px #000000;
+  border-bottom: 1px solid rgb(0, 204, 255);
+}
+
+header nav div.navWrapper ul#navLinksId.navLinks li {
+  text-decoration: none;
+  display: flex;
+}
+
+header nav div.navWrapper ul#navLinksId.navLinks li a {
+  font-size: 1em;
+  text-shadow: 2px 2px rgb(71, 10, 252);
+  border: 1px solid yellow;
+  border-radius: 5px;
+  color: yellow;
+  cursor: alias;
+  margin: 10px;
+  padding: 10px;
+}
+
+.navHeader nav div.navWrapper ul#navLinksId.navLinks li a:hover {
+  color: blue;
+  text-decoration: none;
+  outline-style: dashed;
+  outline-color: rgb(255, 242, 0);
+  outline-width: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: rgb(47, 10, 255);
+  color: yellow;
+  border: 3px solid rgb(0, 255, 26);
+  cursor: alias;
+}
+
+.navHeader nav div ul li a:focus {
+  color: blue;
+  text-decoration: none;
+  outline-style: dashed;
+  outline-color: blue;
+  outline-width: 2px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: blue;
+  color: var(--secondary-hex-color);
+  cursor: alias;
+}
+
+body {
+  background-image: url("/assets/pictures/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  overflow: hidden;
+  padding-top: 5px;
+  font-family: sans-serif;
+  background-color: #466686;
+  /* place-items: center; */
+}
+
+.welcomeBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  margin: 30px;
+  cursor: alias;
+  font-size: 30px;
+  font-weight: 600;
+  color: #0436ed;
+  padding: 40px 55px;
+  box-shadow: 100px 10px 120px rgb(221, 101, 42), 50px 80px 70px rgba(9, 1, 255, 0.771);
+  border-radius: 10px;
+  background-color: #d5d805;
+  animation: move 1s ease-out, ease-in linear;
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+}
+
+.introPromptPanel {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  cursor: alias;
+  color: #ffffff;
+  padding: 10px 10px;
+  border: 5px solid #007a604a;
+  box-shadow: 100px 10px 120px rgba(221, 102, 42, 0.468), 50px 80px 70px rgba(9, 1, 255, 0.394), -50px 80px 70px rgba(56, 1, 255, 0.468);
+  border-radius: 10px;
+  background-color: #3338086c;
+  animation: move 1s ease-out, ease-in linear;
+  transform: translate(-50%, -50%) scale(1) rotate(360deg);
+}
+
+
+.introPromptPanel .introPromptTitle {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex: auto;
+  background-size: cover;
+  flex-flow: row wrap;
+  align-items: center;
+  background: rgb(236, 255, 112);
+  color: rgb(24, 253, 108);
+  border-bottom: 2px solid lightgrey;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(162, 16, 247);
+  text-align: center;
+  padding: 5px 5px;
+  border-radius: 5px 5px 0 0;
+}
+
+.introPromptPanel .introPromptRulesList {
+  padding: 5px 5px;
+}
+.introPromptPanel .introPromptRulesList .introRule {
+  font-size: 22px;
+  font-weight: bold;
+  color: green;
+  text-shadow: 2px 2px rgb(162, 16, 247);
+  text-align: left;
+}
+.introPromptPanel .introPromptRulesList .introRules {
+ 
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px rgb(5, 5, 5);
+  text-align: left;
+  margin: 5px 0;
+}
+.introPromptPanel .introPromptRulesList .introRules1 {
+  font-size: 19px;
+}
+.introPromptPanel .introPromptRulesList .introRules2 {
+  font-size: 18px;
+}
+
+.introPromptPanel .introPromptRulesList .introRules3 {
+  font-size: 17px;
+}
+.introPromptPanel .introPromptRulesList .introRules4 {
+  font-size: 16px;
+}
+.introPromptPanel .introPromptRulesList .introRules5 {
+  font-size: 15px;
+}
+.introPromptPanel .introPromptRulesList .introRules6 {
+  font-size: 14px;
+}
+.introPromptPanel .introPromptRulesList .introRules7 {
+  font-size: 13px;
+}
+.introPromptPanel .introPromptRulesList .introRules8 {
+  font-size: 12px;
+}
+.introPromptPanel .introPromptRulesList .introRules9 {
+  font-size: 11px;
+}
+
+.introPromptPanel .introPromptRulesList .introRules10 {
+  font-size: 10px;
+}
+.introPromptPanel .introPromptRulesList .introRules11 {
+  font-size: 9px;
+}
+.introPromptPanel .introPromptRulesList .introRules12 {
+  font-size: 8px;
+}
+.introPromptPanel .introPromptRulesList .introRules13 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.introPromptPanel .buttons {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+  border-top: 2px solid rgb(229, 255, 0);
+}
+
+.introPromptPanel .buttons button {
+  margin: 0 5px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 50%;
+  background: #d5ff01;
+}
+
+.buttons button.exitQuizBtn {
+  cursor: cell;
+  color: rgb(255, 10, 2);
+  border: 3px solid;
+}
+
+.buttons button.continueBtn {
+  cursor: help;
+  color: #165ca7;
+  border: 3px solid #165ca7;
+}
+
+.buttons button.exitQuizBtn:hover {
+  color: rgb(0, 0, 0);
+  background: #ff0101;
+  border: 2px dotted #000000;
+}
+
+.buttons button.continueBtn:hover {
+  background: #00d111;
+  border: 2px dotted #165ca7;
+}
+
+@media (max-width: 690px) {
+  .btn {
+    font-size: 1rem;
+    margin: 16px 0px 0px 0px;
+    padding: 10px 15px;
+  }
+  }
+  @media (max-width: 500px) {
+  .btn {
+    font-size: 0.8rem;
+  }
+  }
+@keyframes move {
+  0% {
+    transform: translateY(-100%);
+    background-blend-mode: lighten;
+    background-color: black;
+    border: 200px dashed purple;
+  }
+  50% {
+    transform: translateY();
+    background-blend-mode: multiply;
+    background-color: blue;
+  }
+  100% {
+    transform: translateY();
+    background-blend-mode: lighten;
+    background-color: black;
+    border: 200px dashed black, rgb(255, 255, 255);
+  }
+}
