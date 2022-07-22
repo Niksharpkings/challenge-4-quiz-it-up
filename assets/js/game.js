@@ -79,7 +79,7 @@ const questions = [
 
 /*-----------------------------------------------------*/
 
-const CORRECT_BONUS = 25; //variable to hold the amount of points added to the points for correct answers.
+const CORRECT_BONUS = 20; //variable to hold the amount of points added to the points for correct answers.
 const MAX_QUESTIONS = 5; //variable to hold the maximum number of questions before they finish the quiz.
 
 /*
@@ -175,7 +175,7 @@ SELECTIONS.forEach(selection => { //grab each selection from the selections arra
 
 const incrementPoints = num => {
   points += num;
-  POINTS_TEXT.textContent = points;
+  POINTS_TEXT.textContent = `Points: ${points}`;
 };
 
 startGame(); //call startGame function.
