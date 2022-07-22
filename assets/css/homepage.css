@@ -107,7 +107,7 @@ header nav div.navWrapper ul#navLinksId.navLinks li a {
 }
 
 body {
-  background-image: url("/assets/pictures/background.jpeg");
+  background-image: url("../pictures/background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

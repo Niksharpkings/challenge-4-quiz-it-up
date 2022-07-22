@@ -103,7 +103,7 @@ header nav div.navWrapper ul#navLinksId.navLinks li a {
 }
 
 body {
-  background-image: url("/assets/pictures/background.jpeg");
+  background-image: url("../pictures/background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -131,7 +131,7 @@ body {
   margin: 40px;
   font-size: 30px;
   text-align: center;
-  background-image: url("/assets/pictures/1-1902167079.jpg");
+  background-image: url("../pictures/background.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -156,7 +156,7 @@ aside {
   align-items: center;
   background: rgba(175, 5, 197, 0.176);
   border-radius: 5px 5px 0 0;
-  background-image: url("../images/1-675328639.jpg");
+  background-image: url("../pictures/1-675328639.jpg");
   background-position: center;
   background-repeat: repeat round;
   background-size: 100%;
