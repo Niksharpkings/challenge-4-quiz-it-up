@@ -104,7 +104,7 @@ header nav div.navWrapper ul#navLinksId.navLinks li a {
 body {
   padding-top: 5px;
   background-color: #466686;
-  background-image: url("../pictures/istockphoto-925425692-612x612.jpg");
+  background-image: url("./pictures/istockphoto-925425692-612x612.jpg");
   background-size: 30%;
   background-position: center;
   background-blend-mode: exclusion;
@@ -126,8 +126,6 @@ body {
   background-image: url("../pictures/istockphoto-925425692-612x612.jpg");
   background-position: center;
   background-size: cover;
-
-  
 }
 
 .resultPromptPanel .icon {
@@ -181,7 +179,7 @@ input::placeholder {
 .mainMenuBtn {
   color: rgb(19, 75, 187);
   font-weight: 600;
-   background: #ffff01;
+  background: #ffff01;
   border: 3px solid;
 }
 

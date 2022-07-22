@@ -104,7 +104,7 @@ const startGame = () => {
 const getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {//if there are no more questions or if the question counter is greater than or equal to the maximum number of questions, call endGame function.
     localStorage.setItem("mostRecentPoints", points);
-    return window.location.assign('./results.html');// redirect to end.html page. end.html page displays the points and congratulated the user on their success.
+    return window.location.assign('./results.html');// redirect to results.html page. results.html page displays the points and congratulated the user on their success.
   }
   questionCounter++; //increment question counter by 1.
   PROGRESS_TEXT.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`; //display question counter on page.
