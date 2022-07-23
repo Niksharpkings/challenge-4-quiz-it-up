@@ -11,4 +11,9 @@ Has a high scores table. Additionally, the 'View high scores' hyperlink takes th
 The quiz has 5 questions and choices goes to a selected choose of selection arrays.
 
 ### Deployed Link
-https://niksharpkings.github.io/quiz-it-up
+https://niksharpkings.github.io/challenge-4-quiz-it-up
+
+###![image](https://user-images.githubusercontent.com/67552318/180572719-a97145bc-e921-4c2b-a72d-3919614b314e.png)
+
+
+##having a github pages bug where the url for Legal Rights is send it to a URL that is not even in code and the submit button is sending to my main home page when i actually have it set to go to the main page.. strange bug..
