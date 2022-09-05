@@ -1,3 +1,4 @@
+@charset "US-ASCII";
 
 * {
   margin: 0;
@@ -147,7 +148,6 @@ aside {
   background: rgba(4, 31, 179, 0.783);
   border: 10px solid #1b8eed5f;
   border-radius: 10px;
-  
 }
 
 .quizSection .quizPromptPanel aside {

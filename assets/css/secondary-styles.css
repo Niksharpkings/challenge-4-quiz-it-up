@@ -1,9 +1,26 @@
+@charset "US-ASCII";
+
 * {
+  color: #fce138;
+  display: inline-flexbox;
   font-size: 12;
+  background-color: #fce138;
+  background-image: url("../pictures/1-1902167079.jpg");
+  background-size: contain;
+  
 }
 
+body {
+  padding-top: 5px;
+  
+  background-image: url("../pictures/1-1902167079.jpg");
+background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: exclusion;
+}
 
 .hero {
+  color: #fce138;
     background-position: bottom;
     height: auto;
     text-align: center;
@@ -21,27 +38,30 @@
   }
 
   .secondary-content {
+    color: #fce138;
     width: 80%;
     margin: 0 auto;
-    color: #024e76;
   }
 
   .secondary-content h3 {
+    color: #fce138;
     font-size: 25px;
     margin: 20px 0;
   }
 
   .secondary-content p {
+    color: #fce138;
     font-size: 16px;
     line-height: 1.5;
     margin: 20px 0;
   }
 
   .secondary-content ul {
+    color: #fce138;
     margin: 15px 20px;
   }
 
   .secondary-content li {
-    color: #39a6b2;
+    color: #fce138;
     margin: 10px 0;
   }

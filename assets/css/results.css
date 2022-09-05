@@ -1,3 +1,5 @@
+@charset "US-ASCII";
+
 * {
   margin: 0;
   padding: 0;
@@ -104,35 +106,12 @@ header nav div.navWrapper ul#navLinksId.navLinks li a {
 body {
   padding-top: 5px;
   background-color: #466686;
-  background-image: url("./pictures/istockphoto-925425692-612x612.jpg");
+  background-image: url("../pictures/istockphoto-925425692-612x612.jpg");
   background-size: 30%;
   background-position: center;
   background-blend-mode: exclusion;
 }
 
-
-.resultPromptPanel {
-  background: rgb(20, 162, 233);
-  border-radius: 5px;
-  border: 4px solid yellow;
-  display: flex;
-  padding: 60px 60px;
-  margin: 15%;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  cursor: crosshair;
-  transition: all 0.5s ease-in-out;
-  background-image: url("../pictures/istockphoto-925425692-612x612.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.resultPromptPanel .icon {
-  font-size: 100px;
-  color: #b3ff00;
-  margin-bottom: 10px;
-}
 
 form {
   width: 100%;

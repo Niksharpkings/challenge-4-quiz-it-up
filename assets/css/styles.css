@@ -1,3 +1,5 @@
+@charset "US-ASCII";
+
 :root {
   --primary-shadow-color: 0 0 10px #fce138,
     0 0 20px #fce138,
@@ -325,7 +327,7 @@ footer h2 {
       overflow: auto;
       font-size: 12px;
     }
-  
+    
     .projects img {
       width: 50%;
       height: 50%;

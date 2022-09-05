@@ -1,3 +1,4 @@
+@charset "US-ASCII";
 
 .container {
   width: 100%;
@@ -5,13 +6,36 @@
   margin: 0;
   border: 1px solid #165ca7;
   background: #ffff01;
-  
 }
+
 #finalPoints {
   text-shadow: 2px 2px rgb(1, 255, 69);
   color: rgb(0, 85, 255);
   font-size: 2.8rem;
   margin-bottom: 0.5rem;
+}
+
+.resultPromptPanel {
+  background: rgb(20, 162, 233);
+  border-radius: 5px;
+  border: 4px solid yellow;
+  display: flex;
+  padding: 60px 60px;
+  margin: 15%;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: crosshair;
+  transition: all 0.5s ease-in-out;
+  background-image: url("../pictures/istockphoto-925425692-612x612.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.resultPromptPanel .icon {
+  font-size: 100px;
+  color: #b3ff00;
+  margin-bottom: 10px;
 }
 
 #rankList {
