@@ -3,7 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif, 'Roboto', 'Open Sans', 'Helvetica Neue', 'Segoe UI', 'Arial Unicode MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Tahoma', 'Verdana', 'sans-serif';
 }
 
@@ -110,6 +109,8 @@ body {
   background-size: 30%;
   background-position: center;
   background-blend-mode: exclusion;
+  overflow: hidden;
+  padding-top: 30px;
 }
 
 
@@ -141,7 +142,13 @@ input::placeholder {
   margin-bottom: -50px;
   z-index: 1;
 }
-
+.resultPromptPanel {
+  display: block;
+  margin: 10px;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
 
 .resultPromptPanel .buttons button {
   margin: 0 10px;

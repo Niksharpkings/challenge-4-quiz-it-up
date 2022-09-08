@@ -219,26 +219,6 @@ aside {
   background-repeat: no-repeat;
   background-position: center;
 }
-/* 
-.quizSection .quizPromptPanel aside .timeBar {
-  padding: 45px;
-  color: rgb(132, 255, 0);
-  width: 100%;
-  right:10px;
-  height: 8px;
-  text-align: left;
-  font-size: 20px;
-  line-height: 0px;
-  border: 5px dotted rgb(10, 255, 132);
-  box-shadow: rgb(85, 7, 253) 0px 0px 10px;
-  border-radius: 10px;
-  background-image: url("../pictures/istockphoto-1324629035-612x612.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  text-shadow: 2px 2px 2px rgb(192, 0, 0);
-  z-index: 1;
-} */
 
 .questionAsked {
   color: #d4ff00;

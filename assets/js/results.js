@@ -5,13 +5,11 @@ const mostRecentPoints = localStorage.getItem('mostRecentPoints');
 
 const topFive = JSON.parse(localStorage.getItem('topFive')) || [];
 
-const MAX_HIGH_SCORES = 5;
-
 finalPoints.innerText = mostRecentPoints;
 
-username.addEventListener('keyup', () => {
-    saveScoreBtn.disabled = !username.value;
-});
+username.addEventListener('keyup', function() {
+        saveScoreBtn.disabled = !username.value;
+    });
 
 function saveHighScore(e) {
     e.preventDefault();
